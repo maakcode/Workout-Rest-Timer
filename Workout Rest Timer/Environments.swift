@@ -6,7 +6,7 @@ import AppKit
 #endif
 
 private struct StayOnTop: EnvironmentKey {
-    static let defaultValue: StayOnTopAction = StayOnTopAction()
+    static let defaultValue: Bool = false
 }
 
 private struct MovableByWindowBackground: EnvironmentKey {
@@ -14,8 +14,16 @@ private struct MovableByWindowBackground: EnvironmentKey {
 }
 
 extension EnvironmentValues {
-    var stayOnTop: StayOnTopAction {
+    var stayOnTop: Bool {
         get { self[StayOnTop.self] }
+        set {
+            self[StayOnTop.self] = newValue
+            #if canImport(AppKit)
+            NSApplication.shared.windows.forEach { window in
+                window.level = newValue ? .floating : .normal
+            }
+            #endif
+        }
     }
 
     var isMovableByWindowBackground: Bool {
@@ -28,15 +36,5 @@ extension EnvironmentValues {
             }
             #endif
         }
-    }
-}
-
-struct StayOnTopAction {
-    func callAsFunction() {
-#if canImport(AppKit)
-        NSApplication.shared.windows.forEach { window in
-            window.level = window.level == .floating ? .normal : .floating
-        }
-#endif
     }
 }
