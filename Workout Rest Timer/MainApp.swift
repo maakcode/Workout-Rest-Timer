@@ -9,6 +9,7 @@ struct MainApp: App {
         WindowGroup {
             ContentView()
         }
+        .environment(\.isMovableByWindowBackground, true)
         .windowStyle(.hiddenTitleBar)
         .defaultPosition(.topTrailing)
     }
