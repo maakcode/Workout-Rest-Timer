@@ -4,12 +4,14 @@ import SwiftUI
 
 @main
 struct MainApp: App {
+    @State private var isStayOnTop = false
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(stayOnTop: $isStayOnTop)
         }
         .environment(\.isMovableByWindowBackground, true)
+        .environment(\.isStayOnTop, isStayOnTop)
         .windowStyle(.hiddenTitleBar)
         .defaultPosition(.topTrailing)
     }
