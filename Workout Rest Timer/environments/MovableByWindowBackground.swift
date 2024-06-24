@@ -5,15 +5,17 @@ import SwiftUI
 import AppKit
 #endif
 
-private struct MovableByWindowBackground: EnvironmentKey {
-    static let defaultValue: Bool = false
-}
-
 extension EnvironmentValues {
     var isMovableByWindowBackground: Bool {
-        get { self[MovableByWindowBackground.self] }
+        get {
+            #if canImport(AppKit)
+            return NSApplication.shared.windows.allSatisfy { $0.isMovableByWindowBackground
+            }
+            #else
+            return false
+            #endif
+        }
         set {
-            self[MovableByWindowBackground.self] = newValue
             #if canImport(AppKit)
             NSApplication.shared.windows.forEach { window in
                 window.isMovableByWindowBackground = newValue

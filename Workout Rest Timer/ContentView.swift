@@ -17,7 +17,7 @@ struct ContentView: View {
         .onReceive(timer) { _ in
             currentTime = .now
         }
-        .environment(\.stayOnTop, isStayOnTop)
+        .environment(\.isStayOnTop, isStayOnTop)
     }
 }
 
