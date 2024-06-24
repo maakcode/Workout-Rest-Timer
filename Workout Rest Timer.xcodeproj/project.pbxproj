@@ -24,7 +24,7 @@
 		D5D3A12E2C285F890003C8DB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D5D3A1302C285F890003C8DB /* WorkoutRestTimer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WorkoutRestTimer.entitlements; sourceTree = "<group>"; };
 		D5D3A1362C285FBC0003C8DB /* WatchFaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchFaceView.swift; sourceTree = "<group>"; };
-		D5D3A13A2C286E560003C8DB /* Workout-Rest-Timer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Workout-Rest-Timer-Info.plist"; sourceTree = SOURCE_ROOT; };
+		D5D3A13A2C286E560003C8DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
 		D5D3A13C2C29AF4E0003C8DB /* StayOnTop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StayOnTop.swift; sourceTree = "<group>"; };
 		D5D3A13E2C29AF7F0003C8DB /* MovableByWindowBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovableByWindowBackground.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -60,7 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				D5D3A13B2C29AF300003C8DB /* environments */,
-				D5D3A13A2C286E560003C8DB /* Workout-Rest-Timer-Info.plist */,
+				D5D3A13A2C286E560003C8DB /* Info.plist */,
 				D5D3A1272C285F880003C8DB /* MainApp.swift */,
 				D5D3A1362C285FBC0003C8DB /* WatchFaceView.swift */,
 				D5D3A1292C285F880003C8DB /* ContentView.swift */,
@@ -301,14 +301,14 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Workout-Rest-Timer-Info.plist";
+				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.maakcode.Workout-Rest-Timer";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.maakcode.workout-rest-timer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -329,14 +329,14 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Workout-Rest-Timer-Info.plist";
+				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.maakcode.Workout-Rest-Timer";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.maakcode.workout-rest-timer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
